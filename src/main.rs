@@ -55,7 +55,7 @@ fn main() {
     let json = build_json(&text);
 
     if verbose {
-        let string = serde_json::to_string(&json).unwrap();
+        let string = serde_json::to_string(&json).expect("Failed to convert to json string");
         println!("{}", string);
     }
 
